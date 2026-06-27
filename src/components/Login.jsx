@@ -4,6 +4,12 @@ import { createUserProfile, searchUserByEmail } from "../db";
 import { LogIn, UserPlus, Mail, Lock, User, Map, Radio, Users, Phone, Calendar } from "lucide-react";
 import { translations } from "../i18n";
 
+import natureLandscapePhoto from "../assets/nature_landscape_photo.png";
+import seaCoastlineLandscape from "../assets/sea_coastline_landscape.png";
+import hikerMountainSelfie from "../assets/hiker_mountain_selfie.png";
+import beautifulCoastalCity from "../assets/beautiful_coastal_city.png";
+import hikersSelfieGroup from "../assets/hikers_selfie_group.png";
+
 // Local translations for the onboarding features cards
 const infoTranslations = {
   cs: {
@@ -93,11 +99,11 @@ const infoTranslations = {
 
 // Background slideshow logic with 5 requested category images
 const bgImages = [
-  "/src/assets/nature_landscape_photo.png",
-  "/src/assets/sea_coastline_landscape.png",
-  "/src/assets/hiker_mountain_selfie.png",
-  "/src/assets/beautiful_coastal_city.png",
-  "/src/assets/hikers_selfie_group.png"
+  natureLandscapePhoto,
+  seaCoastlineLandscape,
+  hikerMountainSelfie,
+  beautifulCoastalCity,
+  hikersSelfieGroup
 ];
 
 export default function Login({ onClose, lang = "cs", onLoginStart, onAnimationComplete }) {
