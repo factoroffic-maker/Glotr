@@ -499,7 +499,12 @@ export default function Login({ onClose, lang = "cs", onLoginStart, onAnimationC
         <button 
           type="button" 
           onClick={onClose} 
-          style={styles.closeBtn}
+          style={{
+            ...styles.closeBtn,
+            transition: "opacity 0.25s ease-out",
+            opacity: animationPhase !== "idle" ? 0 : 1,
+            pointerEvents: animationPhase !== "idle" ? "none" : "auto"
+          }}
           title="Zavřít"
         >
           ✕
@@ -510,7 +515,7 @@ export default function Login({ onClose, lang = "cs", onLoginStart, onAnimationC
       <div 
         style={{
           ...styles.centeredContainer,
-          transition: "opacity 0.6s ease-in-out",
+          transition: "opacity 0.25s ease-out",
           opacity: animationPhase !== "idle" ? 0 : 1,
           pointerEvents: animationPhase !== "idle" ? "none" : "auto"
         }} 

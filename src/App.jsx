@@ -133,7 +133,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-start",
-    transition: "opacity 0.5s ease-in-out"
+    transition: "opacity 0.25s ease-out"
   },
   settingsBtn: {
     display: "flex",
